@@ -1,13 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const DropdownItem = (props) => {
-    return (
-        <a href="#" className="menu-item">
+  return (
+    <a
+      href="#"
+      className="menu-item"
+      onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
+    >
+      <span className="icon-left">{props.leftIcon}</span>
 
-            {props.children}
+      {props.children}
 
-        </a>
-    )
-}
+      <span className="icon-right">{props.rightIcon}</span>
+    </a>
+  );
+};
 
-export default DropdownItem
+export default DropdownItem;
