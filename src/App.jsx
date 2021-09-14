@@ -5,6 +5,7 @@ import NavItem from "./components/navbar/NavItem";
 
 const App = () => {
   return (
+    console.log();
     <div>
       <Navbar>
         <NavItem location="Home" />
