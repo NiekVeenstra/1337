@@ -5,7 +5,6 @@ import DropdownItem from "./DropdownItem";
 
 const DropdownMenu = () => {
   const { activeMenu } = useContext(Context);
-  console.log(activeMenu);
 
   return (
     <div className="dropdown">
@@ -20,8 +19,9 @@ const DropdownMenu = () => {
           <DropdownItem
             // leftIcon={"left"}
             // rightIcon={"right"}
-            goToMenu="settings">
-              Settings
+            goToMenu="settings"
+          >
+            Settings
           </DropdownItem>
         </div>
       </CSSTransition>
@@ -33,6 +33,7 @@ const DropdownMenu = () => {
         className="menu-secondary"
       >
         <div className="menu">
+          <DropdownItem leftIcon="back" goToMenu="main" />
           <DropdownItem>Settings</DropdownItem>
         </div>
       </CSSTransition>

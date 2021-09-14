@@ -4,8 +4,6 @@ import { Context } from "../../Context/Context";
 const DropdownItem = (props) => {
   const {setActiveMenu} = useContext(Context);
 
-  console.log(props);
-
   return (
     <a
       href="#"
