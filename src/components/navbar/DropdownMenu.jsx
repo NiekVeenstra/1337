@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { CSSTransition } from "react-transition-group";
+import { Context } from "../../Context/Context";
 import DropdownItem from "./DropdownItem";
 
 const DropdownMenu = () => {
-  const [activeMenu, setActiveMenu] = useState("main");
+  const { activeMenu } = useContext(Context);
+  console.log(activeMenu);
 
   return (
     <div className="dropdown">
@@ -15,10 +17,11 @@ const DropdownMenu = () => {
       >
         <div className="menu">
           <DropdownItem>My Profile</DropdownItem>
-          <DropdownItem>
-            leftIcon={"left"}
-            rightIcon={"right"}
-            goToMenu="settings"
+          <DropdownItem
+            // leftIcon={"left"}
+            // rightIcon={"right"}
+            goToMenu="settings">
+              Settings
           </DropdownItem>
         </div>
       </CSSTransition>
