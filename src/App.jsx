@@ -13,13 +13,9 @@ const App = () => {
     <div>
       <Context.Provider value={{activeMenu, setActiveMenu}}>
         <Navbar>
-          <NavItem location="Home" />
-          <NavItem location="Mint" />
-          <NavItem location="About" />
-
-          <NavItem location="test">
-            <DropdownMenu />
-          </NavItem>
+          <NavItem location="H0m3" />
+          <NavItem location="M1n7" />
+          <NavItem location="4b0u7" />
         </Navbar>
       </Context.Provider>
     </div>
