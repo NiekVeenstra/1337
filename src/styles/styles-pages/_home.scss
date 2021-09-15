@@ -1,0 +1,11 @@
+.home {
+  border: solid red 1px;
+  color: $overall-text-color;
+
+  &__introText{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2.2rem;
+  }
+}
