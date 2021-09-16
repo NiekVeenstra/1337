@@ -1,11 +1,32 @@
 .home {
-  border: solid red 1px;
+  // border: solid red 1px;
   color: $overall-text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &__introText{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 2.2rem;
+  &__introText {
+    height: 14rem;
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3.2rem;
+  }
+  &__mintButton {
+    border: $border;
+    color: $overall-text-color;
+    // $button-size: calc(#{$nav-size} * 0.5);
+    width: calc(#{$nav-size} * 1.7);
+    // height: $button-size;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 9px;
+    margin: 10rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
   }
 }
