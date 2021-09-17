@@ -17,7 +17,7 @@ const Navbar = (props) => {
   window.addEventListener("scroll", changeNavbarBackground);
 
   return (
-    <nav className={navbar ? "navbar activeNav" : "navbar"}>
+    <nav className={navbar ? "navbar activeNavbar" : "navbar"}>
       <div className="navbar-contentContainer">
         <Logo />
 

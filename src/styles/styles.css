@@ -34,6 +34,8 @@ ul {
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
   border-bottom: 2px solid #03A062;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,6 +81,10 @@ ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.activeNavbar {
+  background-color: rgba(0, 0, 0, 0.801);
 }
 
 .nav-item {
@@ -286,7 +292,7 @@ ul {
   transition: all 500ms ease;
 }
 
-.home {
+.homepage {
   color: #03A062;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,7 +306,7 @@ ul {
           align-items: center;
 }
 
-.home__introText {
+.homepage__introText {
   width: 90%;
   min-width: 70rem;
   height: 14rem;
@@ -321,15 +327,15 @@ ul {
   font-size: 3.2rem;
 }
 
-.home__introText span:nth-child(1) {
+.homepage__introText span:nth-child(1) {
   font-size: 4rem;
 }
 
-.home__introText span {
+.homepage__introText span {
   text-align: center;
 }
 
-.home__mintButton {
+.homepage__mintButton {
   position: relative;
   border: 2px solid #03A062;
   color: #03A062;
@@ -349,18 +355,18 @@ ul {
   font-size: 3.2rem;
 }
 
-.home__mintButton:hover, .home__mintButton:focus {
+.homepage__mintButton:hover, .homepage__mintButton:focus {
   color: black;
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
 }
 
-.home__mintButton:hover::before, .home__mintButton:focus::before {
+.homepage__mintButton:hover::before, .homepage__mintButton:focus::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.home__mintButton::before {
+.homepage__mintButton::before {
   content: "";
   position: absolute;
   top: 0;
@@ -377,5 +383,10 @@ ul {
           transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
+}
+
+.mintpage {
+  border: solid red 1px;
+  height: 100vh;
 }
 /*# sourceMappingURL=styles.css.map */
