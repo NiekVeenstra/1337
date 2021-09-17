@@ -1,17 +1,24 @@
 .navbar {
-  height: $nav-size;
-  background-color: transparent;
-  padding: 0 1rem;
   border-bottom: $border;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  .navbar-nav {
-    max-width: 100%;
-    height: 100%;
+  .navbar-contentContainer {
+    width: 90%;
+    height: $nav-size;
+    background-color: transparent;
+    padding: 0 1rem;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-nav {
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -24,21 +31,44 @@
 
   .name-button {
     border: $border;
+    position: relative;
     // $button-size: calc(#{$nav-size} * 0.5);
     width: calc(#{$nav-size} * 1.7);
     // height: $button-size;
     background-color: transparent;
-    border-radius: 20px;
+    // border-radius: 20px;
     padding: 9px;
     margin: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
+    &:hover,
+    &:focus {
+      color: rgb(0, 0, 0);
+      filter: brightness(1.2);
+    }
+    &:hover::before,
+    &:focus::before {
+      transform: scaleX(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      background-color: $overall-text-color;
+      transition: transform 300ms ease-in-out;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
   }
-  .name-button:hover {
-    filter: brightness(1.2);
-  }
+  // .name-button:hover {
+  //   filter: brightness(1.2);
+  // }
   .name-button svg {
     fill: $overall-text-color;
     width: 20px;

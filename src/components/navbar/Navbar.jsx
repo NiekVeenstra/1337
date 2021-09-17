@@ -18,16 +18,17 @@ const Navbar = (props) => {
 
   return (
     <nav className={navbar ? "navbar activeNav" : "navbar"}>
-      <Logo />
+      <div className="navbar-contentContainer">
+        <Logo />
 
-      <div className="navbar-burger" open={open} onClick={() => setOpen(!open)}>
-        <div className={open ? " nav-open" : " line"} />
-        <div className={open ? " nav-open" : " line"} />
-        <div className={open ? " nav-open" : " line"} />
+        <div className="navbar-burger" open={open} onClick={() => setOpen(!open)}>
+          <div className={open ? " nav-open" : " line"} />
+          <div className={open ? " nav-open" : " line"} />
+          <div className={open ? " nav-open" : " line"} />
+        </div>
+
+        <ul className="navbar-nav">{props.children}</ul>
       </div>
-
-      <ul className="navbar-nav">{props.children}</ul>
-
     </nav>
   );
 };

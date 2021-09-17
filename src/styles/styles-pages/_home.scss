@@ -6,6 +6,8 @@
   align-items: center;
 
   &__introText {
+    width: 90%;
+    min-width: 70rem;
     height: 14rem;
     margin: 10rem 0;
     display: flex;
@@ -13,20 +15,49 @@
     align-items: center;
     justify-content: space-between;
     font-size: 3.2rem;
+    span:nth-child(1) {
+      font-size: 4rem;
+    }
+    span {
+      text-align: center;
+    }
   }
   &__mintButton {
+    position: relative;
     border: $border;
     color: $overall-text-color;
     // $button-size: calc(#{$nav-size} * 0.5);
     width: calc(#{$nav-size} * 1.7);
     // height: $button-size;
     background-color: transparent;
-    border-radius: 20px;
+    // border-radius: 20px;
     padding: 9px;
     margin: 10rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3.2rem;
+    &:hover,
+    &:focus {
+      color: rgb(0, 0, 0);
+      filter: brightness(1.2);
+    }
+    &:hover::before,
+    &:focus::before {
+      transform: scaleX(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      background-color: $overall-text-color;
+      transition: transform 300ms ease-in-out;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
   }
 }
