@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import InfoBanner from "./components/InfoBanner/InfoBanner";
 import DropdownMenu from "./components/navbar/DropdownMenu";
 import Navbar from "./components/navbar/Navbar";
 import NavItem from "./components/navbar/NavItem";
@@ -18,6 +19,7 @@ const App = () => {
           <NavItem location="4b0u7" />
         </Navbar>
         <Homepage />
+        <InfoBanner />
         <Mintpage />
       </Context.Provider>
     </div>

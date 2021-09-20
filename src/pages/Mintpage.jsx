@@ -7,7 +7,7 @@ const Mintpage = () => {
 
       <div className="mintpageOutercontainer">
         <div className="mintContainer">
-          <h3></h3>
+          <h3>m1n7 y0ur 3l3375</h3>
         </div>
         <div className="mintImage"></div>
       </div>

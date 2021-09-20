@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
   background-color: #000000;
   height: 100%;
+  color: #03A062;
 }
 
 body {
@@ -292,6 +293,39 @@ ul {
   transition: all 500ms ease;
 }
 
+.infoBanner {
+  width: 100%;
+  background-image: url("https://i.postimg.cc/2qkqKymz/matrix-code.gif");
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.infoBanner__totalEleets, .infoBanner__totalMinted, .infoBanner__totalPrice, .infoBanner__totalTraits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 0;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+}
+
 .homepage {
   color: #03A062;
   display: -webkit-box;
@@ -304,6 +338,9 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
+  min-height: 80rem;
+  padding-top: 10rem;
 }
 
 .homepage__introText {
@@ -386,7 +423,20 @@ ul {
 }
 
 .mintpage {
-  border: solid red 1px;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mintpage__title {
+  font-size: 4rem;
 }
 /*# sourceMappingURL=styles.css.map */
